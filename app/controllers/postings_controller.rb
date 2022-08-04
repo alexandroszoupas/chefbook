@@ -3,6 +3,8 @@ class PostingsController < ApplicationController
     @postings = policy_scope(Posting)
   end
 
+  def show
+    @postings = Posting.find(:id)
   def new
     @posting = Posting.new
   end
