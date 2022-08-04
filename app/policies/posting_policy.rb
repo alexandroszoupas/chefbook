@@ -6,5 +6,9 @@ class PostingPolicy < ApplicationPolicy
       # For a multi-tenant SaaS app, you may want to use:
       # scope.where(user: user)
     end
+
+    def show?
+      true
+    end
   end
 end
