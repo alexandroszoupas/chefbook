@@ -22,7 +22,8 @@ end
 (1..loop_num).to_a.sample(2).each do |user_id|
   rand(5).times do
     Posting.create(user_id: user_id,
-                   price: "#{rand(50..200)} Euro",
+                   name: Faker::Name.first_name,
+                   price: rand(50..200),
                    cuisine: Faker::Food.ethnic_category,
                    bio: Faker::Quote.yoda)
   end

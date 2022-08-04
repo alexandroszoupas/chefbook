@@ -4,7 +4,9 @@ class PostingsController < ApplicationController
   end
 
   def show
-    @postings = Posting.find(:id)
+    @postings = Posting.find(params[:id])
+  end
+
   def new
     @posting = Posting.new
   end
