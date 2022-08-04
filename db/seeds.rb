@@ -8,11 +8,22 @@
 
 require "faker"
 
-5.times do
+loop_num = 10
+
+loop_num.times do
   User.create(first_name: Faker::Name.first_name,
               last_name: Faker::Name.first_name,
               email: Faker::Internet.email,
               password: Faker::Internet.password(min_length: 10, max_length: 20),
               address: Faker::Address.full_address,
               phone_number: Faker::PhoneNumber)
+end
+
+(1..loop_num).to_a.sample(2).each do |user_id|
+  rand(5).times do
+    Posting.create(user_id: user_id,
+                   price: "#{rand(50..200)} Euro",
+                   cuisine: Faker::Food.ethnic_category,
+                   bio: Faker::Quote.yoda)
+  end
 end
