@@ -2,7 +2,5 @@
 
 
 <% @postings.each do |posting| %>
-  <h2><%= posting.cuisine %></h2>
+  <%= render 'shared/cardposting' %>
 <% end %>
-
-<%= render 'shared/cardposting' %>

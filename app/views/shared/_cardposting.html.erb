@@ -1,10 +1,11 @@
 <div class="card-trip">
-  <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1381&q=80" />
+  <img src="https://picsum.photos/200/300" />
   <div class="card-trip-infos">
     <div>
-      <h2>Gordon Ramsay</h2>
-      <p>Pizza night for the fam</p>
+      <h2><%= @postings.name %></h2>
+      <h3><%= @postings.cuisine %></h3>
+      <p><%= @postings.bio %></p>
     </div>
-    <h2 class="card-trip-pricing">£999.99</h2>
+    <h2 class="card-trip-pricing">$<%= @postings.price %></h2>
   </div>
 </div>
