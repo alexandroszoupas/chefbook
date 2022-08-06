@@ -1,7 +1,42 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">$<%= @postings.price %></h5>
-    <p class="card-text">Reviews</p>
-    <a href="#" class="btn btn-danger">Reserve</a>
+    <div class="check-form">
+      <h5 class="card-title">$<%= @postings.price %></h5>
+      <p class="card-text">Reviews</p>
+    </div>
+    <form>
+      <label for="">Date</label>
+      <input type="date">
+    </form>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      DINERS
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <p class="dropdown-menu">1</p>
+        <p class="dropdown-menu">2</p>
+        <p class="dropdown-menu">3</p>
+        <p class="dropdown-menu">4</p>
+        <p class="dropdown-menu">5</p>
+      </div>
+    </div>
+    <a href="#" class="btn">Reserve</a>
+    <div class="check-form">
+      <ul style="list-style: none;">
+        <li>$<%= @postings.price %></li>
+        <li>Service fee</li>
+        <li>Taxes</li>
+      </ul>
+      <ul style="list-style: none;">
+        <li>$<%= @postings.price %></li>
+        <li>$<%= 22 %></li>
+        <li>$<%= 18 %></li>
+      </ul>
+    </div>
+    <hr class=solid>
+    <div class="check-form">
+    <p><strong>Total</strong></p>
+    <p>$<%= @postings.price + 22 + 18 %></p>
+    </div>
   </div>
 </div>
