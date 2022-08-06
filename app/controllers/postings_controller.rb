@@ -22,6 +22,19 @@ class PostingsController < ApplicationController
     end
   end
 
+  def edit
+    @posting = Posting.find(params[:id])
+  end
+
+  def update
+    @posting = Posting.find(params[:id])
+    if @posting.update(posting_params)
+      redirect_to postings_path
+    else
+      render :new
+    end
+  end
+
   def find_user
     @user = User.find(params[:user_id])
   end
