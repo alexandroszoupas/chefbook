@@ -1,0 +1,9 @@
+<div>
+  <%= simple_form_for(@posting) do |f| %>
+          <%= f.input :name, placeholder: 'whats this about' %>
+          <%= f.input :cuisine, placeholder: 'mam mam' %>
+          <%= f.input :price, placeholder: 'money money' %>
+          <%= f.input :bio, placeholder: 'your life story man' %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
+</div>
