@@ -2,6 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'postings#index'
 
-  resources :postings, only: [:index, :new, :create, :show]
+  resources :postings, only: [:index, :new, :create, :show, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
