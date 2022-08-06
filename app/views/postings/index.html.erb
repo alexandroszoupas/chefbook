@@ -4,8 +4,9 @@
     <h1>the perfect meal</h1>
   </div>
 </div>
-<h2> Postings here </h2>
 
-<% @postings.each do |posting| %>
-  <%= render 'shared/cardposting', posting: posting %>
-<% end %>
+<div class="index-display">
+  <% @postings.each do |posting| %>
+    <%= render 'shared/cardposting', posting: posting %>
+  <% end %>
+</div>
