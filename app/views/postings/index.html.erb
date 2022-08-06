@@ -6,6 +6,6 @@
 </div>
 <h2> Postings here </h2>
 
-<%# <% @postings.each do |posting| %> %>
-  <%# <%= render 'shared/cardposting' %> %>
-<%# <% end %> %>
+<% @postings.each do |posting| %>
+  <%= render 'shared/cardposting', posting: posting%>
+<% end %>
