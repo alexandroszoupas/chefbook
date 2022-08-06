@@ -15,7 +15,7 @@ class PostingsController < ApplicationController
   def create
     @posting = Posting.new(posting_params)
     @posting.user = current_user
-    if @posting.save!
+    if @posting.save
       redirect_to posting_path(@posting)
     else
       render :new
