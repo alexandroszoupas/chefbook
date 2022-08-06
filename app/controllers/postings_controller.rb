@@ -1,6 +1,7 @@
 class PostingsController < ApplicationController
   def index
     @postings = policy_scope(Posting)
+    @posting = Posting.new
   end
 
   def show
@@ -13,18 +14,22 @@ class PostingsController < ApplicationController
 
   def create
     @posting = Posting.new(posting_params)
-    @user = User.find(params[:user_id])
-    @review.user = @user
-    if @posting.save
-      redirect_to user_path(@user)
+    @posting.user = current_user
+    if @posting.save!
+      redirect_to posting_path(@posting)
     else
-      render 'new'
+      render :new
     end
   end
 
   def find_user
     @user = User.find(params[:user_id])
   end
+
+  # def destroy
+  #   @posting.destroy
+  #   redirect_to postings_url, notice: 'Posting was successfully destroyed.'
+  # end
 
   private
 
