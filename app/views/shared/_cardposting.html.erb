@@ -9,6 +9,7 @@
         <p><%= posting.bio[0..75]%>...</p>
       </div>
       <h2 class="card-pricing">$<%= posting.price %></h2>
+      <p><%= link_to "Delete", posting_path(posting),method: :delete, data: {confirm: "Are you sure?"} %></p>
       </div>
     </div>
   <% end %>

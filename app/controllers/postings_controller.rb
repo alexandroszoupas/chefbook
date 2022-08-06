@@ -26,6 +26,12 @@ class PostingsController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
+  def destroy
+    @posting = Posting.find(params[:id])
+    @posting.destroy
+    redirect_to postings_path
+  end
+
   private
 
   def posting_params
