@@ -5,6 +5,7 @@
   margin-top: 16px;
   box-sizing: border-box;
   min-height: 680px;
+  position: relative;
 }
 
 .cards img {
@@ -18,7 +19,10 @@
 }
 
 .card-pricing {
- float: right;
+ position: absolute;
+ bottom: 10px;
+ right: 15px;
+ font-size: 25px;
 }
 
 .index-display {
