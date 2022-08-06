@@ -4,10 +4,13 @@
       <h5 class="card-title">$<%= @postings.price %></h5>
       <p class="card-text">Reviews</p>
     </div>
-    <form>
+    <form class="date-form">
       <label for="">Date</label>
       <input type="date">
     </form>
+    <%# <%= simple_form_for(@postings) do |f|  %>
+      <%# <%= f.input :date, placeholder: 'Please set a date' %> %>
+    <%# <% end %> %> %>
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         DINERS
@@ -20,7 +23,7 @@
         <li class="dropdown-item">5</li>
       </ul>
     </div>
-    <a href="#" class="btn">Reserve</a>
+    <a href="#" class="btn-reserve">Reserve</a>
     <div class="check-form">
       <ul style="list-style: none; padding-left: 0;">
         <li>$<%= @postings.price %></li>
