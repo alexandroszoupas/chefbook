@@ -2,7 +2,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 300px;
   border-radius: 15px;
-  padding: 10px;
   margin-top: 16px;
   box-sizing: border-box;
   min-height: 680px;
@@ -12,6 +11,14 @@
   width: 100%;
   border-radius: 15px;
   object-fit: cover;
+}
+
+.card-infos {
+  padding: 15px;
+}
+
+.card-pricing {
+ float: right;
 }
 
 .index-display {
