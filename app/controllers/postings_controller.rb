@@ -26,10 +26,11 @@ class PostingsController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-  # def destroy
-  #   @posting.destroy
-  #   redirect_to postings_url, notice: 'Posting was successfully destroyed.'
-  # end
+  def destroy
+    @posting = Posting.find(params[:id])
+    @posting.destroy
+    redirect_to postings_path
+  end
 
   private
 

@@ -1,11 +1,17 @@
-<div class="card-trip">
-  <img src="https://picsum.photos/200/300" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= posting.name %></h2>
-      <h3><%= posting.cuisine %></h3>
-      <p><%= posting.bio %></p>
+
+<div class="container">
+  <%= link_to posting_path(posting) do %>
+    <div class="cards">
+      <img src="https://picsum.photos/200/300" />
+      <div class="card-infos">
+      <div>
+        <h2><%= posting.name %></h2>
+        <h3><%= posting.cuisine %></h3>
+        <p><%= posting.bio[0..75]%>...</p>
+      </div>
+      <h2 class="card-pricing">$<%= posting.price %></h2>
+      <p><%= link_to "Delete", posting_path(posting),method: :delete, data: {confirm: "Are you sure?"} %></p>
+      </div>
     </div>
-    <h2 class="card-trip-pricing">$<%= posting.price %></h2>
-  </div>
+  <% end %>
 </div>
