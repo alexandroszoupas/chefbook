@@ -1,16 +1,18 @@
 <div class="container">
-  <h2><%= @postings.name %></h2>
-  <div class="row">
-    <div class="column">
-      <img src="https://picsum.photos/200/300" alt="">
-      <%# <img src="https://picsum.photos/200/300" alt=""> %>
+  <h1><%= @postings.name %></h1>
+  <div class="image-grid">
+    <img class="image-grid-row-2" src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3VzaGl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3VzaGl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1617196035303-964a45bbc9f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHN1c2hpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+  </div>
+  <div class="card-price">
+    <div>
+      <h2><%= @postings.cuisine %></h2>
+      <p><%= @postings.bio %></p>
     </div>
-    <div class="column">
-        <%# <img src="https://picsum.photos/200/300" alt=""> %>
+    <div class="card-render">
+      <%= render 'shared/pricecardposting' %>
     </div>
   </div>
-  <%= render 'shared/pricecardposting' %>
-  <h2><%= @postings.cuisine %></h2>
-  <h2><%= @postings.bio %></h2>
   <%= link_to "Show all postings", postings_path %>
 </div>
