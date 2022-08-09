@@ -1,5 +1,6 @@
 .card {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $booking-card-font;
+  font-weight: 500;
   border-radius: 16px;
   background-color: #F3F9FC;
   .btn {
