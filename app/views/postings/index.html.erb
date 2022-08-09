@@ -5,8 +5,10 @@
   </div>
 </div>
 
-<div class="index-display">
-  <% @postings.each do |posting| %>
-    <%= render 'shared/cardposting', posting: posting %>
-  <% end %>
+<div class="container">
+  <div class="index-display">
+    <% @postings.each do |posting| %>
+      <%= render 'shared/cardposting', posting: posting %>
+    <% end %>
+  </div>
 </div>
