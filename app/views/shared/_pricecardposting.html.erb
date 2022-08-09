@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <div class="check-form">
-      <h5 class="card-title">$<%= @postings.price %></h5>
+      <h5 class="card-title">$<%= @posting.price %></h5>
       <p class="card-text">Reviews</p>
     </div>
     <form>
@@ -23,12 +23,12 @@
     <a href="#" class="btn">Reserve</a>
     <div class="check-form">
       <ul style="list-style: none; padding-left: 0;">
-        <li>$<%= @postings.price %></li>
+        <li>$<%= @posting.price %></li>
         <li>Service fee</li>
         <li>Taxes</li>
       </ul>
       <ul style="list-style: none; padding-left: 0;">
-        <li>$<%= @postings.price %></li>
+        <li>$<%= @posting.price %></li>
         <li>$<%= 22 %></li>
         <li>$<%= 18 %></li>
       </ul>
@@ -36,7 +36,7 @@
     <hr class=solid>
     <div class="check-form">
     <p><strong>Total</strong></p>
-    <p>$<%= @postings.price + 22 + 18 %></p>
+    <p>$<%= @posting.price + 22 + 18 %></p>
     </div>
   </div>
 </div>
