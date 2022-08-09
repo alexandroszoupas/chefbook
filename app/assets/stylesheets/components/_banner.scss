@@ -1,20 +1,32 @@
 .banner {
   background-size: cover;
-  background-position: center;
+  background-position: top;
   padding: 150px 0;
+  height: 550px;
+  position: relative;
+
+  .navbar {
+    height: 60px;
+    margin-top: 0;
+    position: absolute;
+    top: 0px;
+
+    .nav-link {
+      color: rgb(221, 235, 246);
+    }
+
+    h2 {
+      color: rgb(221, 235, 246);
+    }
+
+    }
 }
+
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: rgb(221, 235, 246);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 58px;
   font-weight: bold;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
