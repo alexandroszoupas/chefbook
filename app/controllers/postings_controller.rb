@@ -5,7 +5,8 @@ class PostingsController < ApplicationController
   end
 
   def show
-    @postings = Posting.find(params[:id])
+    @booking = Booking.new
+    @posting = Posting.find(params[:id])
   end
 
   def new
