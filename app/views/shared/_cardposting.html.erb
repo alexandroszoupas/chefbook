@@ -1,25 +1,4 @@
 <%= link_to posting_path(posting) do %>
-<<<<<<< HEAD
-  <div class="cards">
-    <img src="https://picsum.photos/200/300" />
-    <div class="card-infos">
-      <div>
-        <h2><%= posting.name %></h2>
-        <h3><%= posting.cuisine %></h3>
-        <p><%= posting.bio[0..75]%>...</p>
-      </div>
-      <div class="row align-items-end">
-        <div class= 'col'>
-          <h2 class="card-pricing">$<%= posting.price %></h2>
-        </div>
-        <div class="col d-flex justify-content-start align-baseline">
-            <h5 class='row '><%= link_to "Delete", posting_path(posting),method: :delete, data: {confirm: "Are you sure?"} %></h5>
-            <h5 class='row'><%= link_to "Edit", edit_posting_path(posting) %></h5>
-        </div>
-      </div>
-    </div>
-  </div>
-=======
   <section>
     <div class="cards">
       <div class="top"></div>
@@ -31,12 +10,12 @@
             <p><%= posting.bio[0..75]%>...</p>
             </div>
             <h2 class="card-pricing">$<%= posting.price %></h2>
+            <% if current_user == posting.user %>
+  <p>Delete</p>
+  <p>Edit%>
+<% end %>
         </div>
       </div>
     </div>
   </section>
->>>>>>> 82e7c37cca51c61a8bb2b6c99a8f4d6d84b335e0
 <% end %>
-
- <%# <p><%= link_to "Delete", posting_path(posting),method: :delete, data: {confirm: "Are you sure?"} %></p>
-<%# <p><%= link_to "Edit", edit_posting_path(posting)</p> %>
