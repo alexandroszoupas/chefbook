@@ -1,42 +1,32 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
   <div class="card-body">
     <div class="check-form">
       <h5 class="card-title">$<%= @posting.price %></h5>
       <p class="card-text">Reviews</p>
     </div>
-    <form>
-      <label for="">Date</label>
-      <input type="date">
-    </form>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        DINERS
-      </button>
-      <ul class="dropdown-menu">
-        <li class="dropdown-item">1</li>
-        <li class="dropdown-item">2</li>
-        <li class="dropdown-item">3</li>
-        <li class="dropdown-item">4</li>
-        <li class="dropdown-item">5</li>
-      </ul>
+    <div class="cont-form">
+      <%= simple_form_for [@posting, @booking] do |f| %>
+            <%= f.input :occurs_on, as: :date, label: false, html5: true %>
+            <%= f.input :diners, label: false, placeholder: 'Select number of guests' %>
+            <%= f.submit class: 'btn btn-flat'%>
+          <% end %>
     </div>
-    <a href="#" class="btn">Reserve</a>
-    <div class="check-form">
+    <div class="check-form-start">
       <ul style="list-style: none; padding-left: 0;">
         <li>$<%= @posting.price %></li>
         <li>Service fee</li>
         <li>Taxes</li>
       </ul>
       <ul style="list-style: none; padding-left: 0;">
-        <li>$<%= @posting.price %></li>
+        <li>$<%= @posting.price%></li>
         <li>$<%= 22 %></li>
         <li>$<%= 18 %></li>
       </ul>
     </div>
     <hr class=solid>
-    <div class="check-form">
-    <p><strong>Total</strong></p>
-    <p>$<%= @posting.price + 22 + 18 %></p>
-    </div>
   </div>
+    <div class="check-form-end">
+    <div class="r"><h4>Total</h4></div>
+    <div class="l"><h4>$<%= @posting.price + 22 + 18 %></h4></div>
+    </div>
 </div>
