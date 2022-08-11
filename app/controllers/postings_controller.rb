@@ -9,11 +9,11 @@ class PostingsController < ApplicationController
   def show
     @booking = Booking.new
     # @posting = Posting.find(params[:id])
-
   end
 
   def new
     @posting = Posting.new
+    authorize @posting
   end
 
   def create
@@ -25,6 +25,7 @@ class PostingsController < ApplicationController
     else
       render :new
     end
+    authorize @posting
   end
 
   def edit
