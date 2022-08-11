@@ -1,4 +1,6 @@
 class PostingsController < ApplicationController
+  before_action :set_posting, only: %i[show edit]
+
   def index
     @postings = policy_scope(Posting)
     @posting = Posting.new
@@ -6,7 +8,7 @@ class PostingsController < ApplicationController
 
   def show
     @booking = Booking.new
-    @posting = Posting.find(params[:id])
+    # @posting = Posting.find(params[:id])
   end
 
   def new
@@ -47,6 +49,9 @@ class PostingsController < ApplicationController
   end
 
   private
+  def set_posting
+    @posting = Posting.find(params[:id])
+  end
 
   def posting_params
     params.require(:posting).permit(:cuisine, :price, :bio, :name)
