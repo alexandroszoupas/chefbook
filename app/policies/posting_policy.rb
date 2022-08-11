@@ -1,22 +1,24 @@
 class PostingPolicy < ApplicationPolicy
   class Scope < Scope
+    # NOTE: Be explicit about which records you allow access to!
     def resolve
       scope.all
-
-      # For a multi-tenant SaaS app, you may want to use:
-      # scope.where(user: user)
     end
+  end
 
-    def show?
-      true
-    end
+  def create?
+    true
+  end
 
-    def index?
-      true
-    end
+  def show?
+    true
+  end
 
-    def edit?
-      true
-    end
+  def update?
+    user == record.user
+  end
+
+  def destroy?
+    user == record.user
   end
 end
