@@ -7,18 +7,20 @@
     <img src="https://images.unsplash.com/photo-1617196035303-964a45bbc9f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHN1c2hpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
   </div>
   <div class="card-price">
-    <div>
-      <h2><%= @posting.cuisine %></h2>
-      <h4><%= @posting.bio %></h4>
+    <div class="left">
+      <div class="show-desc">
+        <h2><%= @posting.cuisine %></h2>
+        <p><%= @posting.bio %></p>
+      </div>
+      <hr class=line>
     </div>
-    <div class="card-render">
+    <div class="right">
       <%= render 'shared/pricecardposting' %>
     </div>
   </div>
   <%= link_to "Show all postings", postings_path %>
 
-  <%= simple_form_for [@posting, @booking] do |f| %>
-          <%= f.input :occurs_on, placeholder: 'Select date'%>
-          <%= f.submit class: 'btn btn-flat'%>
-        <% end %>
+  <%# <p><%= link_to "Delete", posting_path(posting),method: :delete, data: {confirm: "Are you sure?"} %></p>
+  <%# <p><%= link_to "Edit", edit_posting_path(posting) %></p> %> %>
+
 </div>
