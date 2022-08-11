@@ -11,9 +11,9 @@
   margin-left: 15px;
 }
 
-.navbar-lewagon {
+.navbar-show {
   justify-content: space-between;
-  background-color: rgba(0,0,0,.2);
+  background-color: #102634;
   align-items: flex-start;
   width: 100%;
   margin-top: 0;
@@ -45,10 +45,10 @@
 
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-show .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-show .navbar-brand img {
   width: 40px;
 }
