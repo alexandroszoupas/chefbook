@@ -18,9 +18,9 @@
       <%= render 'shared/pricecardposting' %>
     </div>
   </div>
-  <%= link_to "Show all postings", postings_path %>
+  <%# <%= link_to "Show all postings", postings_path %>
 
-  <%# <p><%= link_to "Delete", posting_path(posting),method: :delete, data: {confirm: "Are you sure?"} %></p>
-  <%# <p><%= link_to "Edit", edit_posting_path(posting) %></p> %> %>
+  <button class="btn-show"><%= link_to "Delete", posting_path(@posting),method: :delete, data: {confirm: "Are you sure?"} %></button>
+  <button class="btn-show"><%= link_to "Edit", edit_posting_path(@posting) %></button>
 
 </div>
