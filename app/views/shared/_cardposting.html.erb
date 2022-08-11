@@ -7,7 +7,7 @@
             <div class="btn"><%= posting.cuisine %></div>
             <div class="cont-info">
             <h2><%= posting.name %>
-            <p><%= posting.bio[0..75]%>...</p>
+            <p><%= posting.bio[0..60]%>...</p>
             </div>
             <h2 class="card-pricing">$<%= posting.price %></h2>
         </div>
@@ -15,6 +15,3 @@
     </div>
   </section>
 <% end %>
-
- <%# <p><%= link_to "Delete", posting_path(posting),method: :delete, data: {confirm: "Are you sure?"} %></p>
-<%# <p><%= link_to "Edit", edit_posting_path(posting)</p> %>
