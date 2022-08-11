@@ -10,6 +10,10 @@
             <p><%= posting.bio[0..60]%>...</p>
             </div>
             <h2 class="card-pricing">$<%= posting.price %></h2>
+            <% if current_user == posting.user %>
+  <p>Delete</p>
+  <p>Edit%>
+<% end %>
         </div>
       </div>
     </div>
