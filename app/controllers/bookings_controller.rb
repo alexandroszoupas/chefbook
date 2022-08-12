@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    authorize @posting
   end
 
   def create
@@ -15,6 +16,7 @@ class BookingsController < ApplicationController
     else
       render "postings/show"
     end
+    authorize @posting
   end
 
   def destroy
@@ -25,7 +27,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :diners)
+    params.require(:booking).permit(:occurs_on, :diners)
   end
 
   def set_booking
