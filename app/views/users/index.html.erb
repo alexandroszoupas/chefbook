@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: url(https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&w=1600)">
+  <%= render 'shared/navbar' %>
+  <div class="container">
+    <h1>The perfect cook for</h1>
+    <h1>the perfect meal</h1>
+  </div>
+</div>
+
+<div class="container-index">
+  <div class="index-display">
+    <% @postings.each do |posting| %>
+    <% if posting.user == current_user %>
+      <%= render 'shared/cardposting', posting: posting %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
