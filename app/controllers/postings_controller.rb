@@ -59,6 +59,6 @@ class PostingsController < ApplicationController
   end
 
   def posting_params
-    params.require(:posting).permit(:cuisine, :price, :bio, :name, :photo)
+    params.require(:posting).permit(:cuisine, :price, :bio, :name, photos: [])
   end
 end
