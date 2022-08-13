@@ -11,8 +11,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.posting = @posting
-    if @booking.save!
-      redirect_to posting_path(@posting)
+    if @booking.save
+      redirect_to my_bookings_path
     else
       render "postings/show"
     end
