@@ -1,8 +1,15 @@
 <%=  render 'shared/navbar2' %>
-<div class="form-container">
-  <div class="form-div">
-    <h2> Edit Postings </h2>
+ <div class="form-div">
+    <div class="edit-title">
+      <h2> Edit Postings </h2>
+    </div>
+    <div class="dlt-btn">
+      <% if current_user == @posting.user %>
+        <button class="btn-show"><%= link_to "Delete", posting_path(@posting),method: :delete, data: {confirm: "Are you sure?"} %></button>
+      <%end%>
+    </div>
   </div>
-
+<div class="form-container">
   <%= render 'form', posting: @posting %>
 </div>
+<%= link_to "Back to Post", posting_path %>

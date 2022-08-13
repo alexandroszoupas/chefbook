@@ -1,12 +1,6 @@
-<div class="banner" style="background-image: url(https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&w=1600)">
-  <%= render 'shared/navbar' %>
-  <div class="container">
-    <h1>The perfect cook for</h1>
-    <h1>the perfect meal</h1>
-  </div>
-</div>
-
+<%= render 'shared/navbar2' %>
 <div class="container-index">
+  <h2>MY POSTINGS</h2>
   <div class="index-display">
     <% @postings.each do |posting| %>
         <%= render 'shared/cardposting', posting: posting %>
