@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'postings#index'
-
+  get 'my_postings', to: 'pages#user_postings'
   resources :postings do
     resources :bookings, only: [:new, :create, :destroy]
   end # only: [:index, :new, :create, :show, :destroy, :edit,]
