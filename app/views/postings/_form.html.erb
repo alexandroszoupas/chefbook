@@ -5,6 +5,7 @@
             <%= f.input :cuisine, placeholder: 'Cuisine' %>
             <%= f.input :price, placeholder: 'Price' %>
             <%= f.input :bio, placeholder: 'Bio' %>
+            <%= f.input :photos, input_html: { multiple: true } %>
             <%= f.submit class: 'btn btn-gradient' %>
           <% end %>
   </div>

@@ -13,7 +13,7 @@
   border-radius: 18px;
   box-shadow: $shadow-xl;
 }
-
+// antes con agregarle la clase .image-grid-row-2 a una photo se podia. En este caso como estoy iterando se las agrega a todos
 
 .image-grid-row-2 {
   grid-row: span 2;
