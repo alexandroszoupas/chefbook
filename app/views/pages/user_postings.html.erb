@@ -1,9 +1,9 @@
 <%= render 'shared/navbar2' %>
-<div class="container-index">
+<div class="container-bdy">
   <h2>MY POSTINGS</h2>
+</div>
   <div class="index-display">
     <% @postings.each do |posting| %>
-        <%= render 'shared/cardposting', posting: posting %>
+      <%= render 'shared/cardposting', posting: posting %>
     <% end %>
   </div>
-</div>
