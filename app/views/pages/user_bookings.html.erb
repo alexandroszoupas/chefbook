@@ -9,8 +9,15 @@
 <div class="container-index">
   <div class="index-display">
     <% @bookings.each do |booking| %>
-      <p><%= booking.occurs_on  %></p>
-      <p><%= Posting.find(id = booking.posting_id).bio%></p>
+      <%= link_to posting_path(id = booking.posting_id) do %>
+      <div class="card-bookings">
+        <div class="card-bookings-infos">
+          <h2><%= Posting.find(id = booking.posting_id).name%></h2>
+          <p><%= booking.occurs_on  %></p>
+          <p><%= Posting.find(id = booking.posting_id).bio[0..100]%>...</p>
+        </div>
+      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
