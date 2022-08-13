@@ -4,6 +4,25 @@
 .banner {
   text-align: center;
   background-size: cover;
+  .container {
+    font-family: $banner-font;
+
+    .h1-div {
+      margin-bottom: 26px;
+      font-family: $banner-font;
+    }
+    .new-post-btn {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: rgb(234, 236, 247);
+      color: black;
+      padding: 20px 30px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  }
 }
 
 .notice {
