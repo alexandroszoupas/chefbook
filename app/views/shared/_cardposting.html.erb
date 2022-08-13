@@ -1,7 +1,7 @@
 <%= link_to posting_path(posting) do %>
   <section>
     <div class="cards">
-      <div class="top" style="background-image: url('<%= cl_image_path posting.photos[0].key, crop: :fill %>')"></div>
+      <div class="top" style="background-image: url('<%= !posting.photos[0].nil? ? (cl_image_path posting.photos[0]&.key, crop: :fill): "" %>')"></div>
       <div class="bottom">
         <div class="card-infos">
             <div class="btn"><%= posting.cuisine %></div>
