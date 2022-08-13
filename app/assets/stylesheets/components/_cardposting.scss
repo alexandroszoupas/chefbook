@@ -111,6 +111,10 @@ a {
     border-top-right-radius: 26px;
     box-shadow: $shadow-lg;
   }
+  .test {
+    background-size: cover;
+    background-position: center;
+  }
 
   .bottom {
     width: 265px;
