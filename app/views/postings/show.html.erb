@@ -24,7 +24,7 @@
   </div>
   <%# <%= link_to "Show all postings", postings_path %>
   <% if current_user == @posting.user %>
-  <button class="btn-show"><%= link_to "Delete", posting_path(@posting),method: :delete, data: {confirm: "Are you sure?"} %></button>
-  <button class="btn-show"><%= link_to "Edit", edit_posting_path(@posting) %></button>
+    <button class="btn-show"><%= link_to "Delete", posting_path(@posting),method: :delete, data: {confirm: "Are you sure?"} %></button>
+    <button class="btn-show"><%= link_to "Edit", edit_posting_path(@posting) %></button>
   <%end%>
 </div>
