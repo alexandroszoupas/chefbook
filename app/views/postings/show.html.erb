@@ -2,8 +2,12 @@
 <div class="container">
   <h1><%= @posting.name %></h1>
   <div class="image-grid">
-    <% @posting.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, class:"img" %>
+    <% @posting.photos.each_with_index do |photo, i| %>
+      <% if i > 0 %>
+        <%= cl_image_tag photo.key, class:"img"  %>
+      <% else %>
+        <%= cl_image_tag photo.key, class:"image-grid-row-2" %>
+        <% end %>
     <% end %>
   </div>
   <div class="card-price">
